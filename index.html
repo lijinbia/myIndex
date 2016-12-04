@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app0">
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/ionic/1.3.2/css/ionic.min.css" />
+		<script src="http://cdn.bootcss.com/ionic/1.3.2/js/ionic.bundle.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var m0 = angular.module("app0",["ionic"]);
+			m0.config(["$stateProvider",function ($stateProvider) {
+				$stateProvider.state("aaa",{
+					url:"/index",
+					templateUrl:"temp/test01.html"
+				})
+			}])
+			
+			m0.controller("index",function ($scope) {
+//				$state.go("aaa");
+
+			})
+		</script>
 	</head>
-	<body>
+	<body ng-controller="index">
+
+		<ion-nav-view></ion-nav-view>
 		
 	</body>
 </html>
